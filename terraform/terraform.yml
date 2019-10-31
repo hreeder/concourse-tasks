@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: hashicorp/terraform
+    tag: "0.12.12"
+
+inputs:
+- name: repo
+
+run:
+  path: terraform
+  args:
+  - ((command))
+  dir: repo
